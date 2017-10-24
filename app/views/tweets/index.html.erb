@@ -2,7 +2,9 @@
 
 <h1>Tweets</h1>
 
-<%= image_tag current_user.avatar.url, size: 200 %>
+<% if current_user.avatar.url %>
+  <%= image_tag current_user.avatar.url, size: 200 %>
+<% end %>
 
 <table class="table table-hover table-striped">
   <thead>
